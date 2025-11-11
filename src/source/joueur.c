@@ -2,7 +2,6 @@
 #include "../include/joueur.h"
 #include "../include/creatures.h"
 
-// Fonction pour initialiser le joueur
 void initialiserJoueur(Plongeur *p) {
     p->pv_max = 100;
     p->pv = p->pv_max;
@@ -12,7 +11,7 @@ void initialiserJoueur(Plongeur *p) {
     p->perles = 0;
 }
 
-// Fonction pour afficher l'état du joueur
+
 void afficherStatutJoueur(Plongeur p) {
     printf("\n===== STATUT DU PLONGEUR =====\n");
     printf("Vie: %d/%d\n", p.pv, p.pv_max);
@@ -21,7 +20,7 @@ void afficherStatutJoueur(Plongeur p) {
     printf("Perles: %d\n", p.perles);
 }
 
-// Fonction d'attaque du joueur sur une créature
+
 void attaquerCreature(Plongeur *p, CreatureMarine *c) {
     int degats = 15 - c->defense;
     if (degats < 1) degats = 1;

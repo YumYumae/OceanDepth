@@ -15,7 +15,7 @@ void demarrerCombat(Plongeur *p, CreatureMarine *c) {
             break;
         }
 
-        // Riposte de la créature
+
         int degats = c->attaque_minimale + (rand() % (c->attaque_maximale - c->attaque_minimale + 1));
         p->pv -= degats;
         if (p->pv < 0) p->pv = 0;

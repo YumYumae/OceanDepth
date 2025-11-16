@@ -56,7 +56,7 @@ void afficher_menu(Plongeur* p, int attaques_restantes) {
            attaques_restantes > 1 ? "s" : "",
            attaques_restantes > 1 ? "s" : "",
            VERT, RESET);
-    printf("%s║%s 2 - Utiliser compétence marine                     %s║%s\n", 
+    printf("%s║%s 2 - ⚡ Décharge Électrique (18 oxygène, dégâts 20–30, zone)%s║%s\n",
            VERT, RESET, VERT, RESET);
     printf("%s║%s 3 - Consommer objet                                %s║%s\n", 
            VERT, RESET, VERT, RESET);
@@ -242,7 +242,47 @@ int faire_tour(Plongeur* p, CreatureMarine* creatures, int nb, int prof) {
                 }
             }
         } else if (choix == 2) {
-            printf("%s⚠️  Competences non implementées !%s\n", JAUNE, RESET);
+            // Compétence : Décharge Électrique
+            int cout_oxygene = 18;
+
+            if (p->oxygene < cout_oxygene) {
+                printf("%s❌ Pas assez d'oxygène pour utiliser la Décharge Électrique !%s\n", ROUGE, RESET);
+            } else {
+                printf("%s⚡ Vous utilisez Décharge Électrique ! ⚡%s\n", JAUNE, RESET);
+
+                // Consommation d'oxygène
+                perdre_oxygene(p, cout_oxygene);
+
+                // Dégâts de zone
+                int total_victimes = 0;
+                for (int i = 0; i < nb; i++) {
+                    if (creatures[i].vivant == 1) {
+                        int degats = 20 + rand() % 11; // 20–30
+                        creatures[i].pv -= degats;
+                        printf("%s💥 %s subit %d dégâts électriques !%s\n",
+                               CYAN, creatures[i].nom, degats, RESET);
+                        if (creatures[i].pv <= 0) {
+                            creatures[i].pv = 0;
+                            creatures[i].vivant = 0;
+                            printf("%s💀 %s est foudroyé !%s\n", VERT, creatures[i].nom, RESET);
+                        }
+                        total_victimes++;
+                    }
+                }
+
+                augmenter_fatigue(p, 2); // plus fatigant qu’une attaque normale
+
+                if (compter_vivants(creatures, nb) == 0) {
+                    printf("\n%s🎉 VICTOIRE ! Toutes les créatures sont éliminées ! 🎉%s\n",
+                           VERT, RESET);
+                    return 0;
+                }
+
+                if (plongeur_vivant(p) == 0) {
+                    printf("\n%s💀 Vous avez succombé après l’effort ! 💀%s\n", ROUGE, RESET);
+                    return 0;
+                }
+            }
         } else if (choix == 3) {
             printf("%s⚠️  Inventaire non implementé !%s\n", JAUNE, RESET);
         } else if (choix == 4) {

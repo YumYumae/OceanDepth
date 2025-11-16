@@ -26,16 +26,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02be32a1-4463-4e32-b54a-bf103d7167c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/combat/combat.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/combat/combat.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/creatures/creatures.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/joueur/joueur.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/joueur/joueur.h" afterDir="false" />
+    <list default="true" id="02be32a1-4463-4e32-b54a-bf103d7167c7" name="Changes" comment="commit&amp;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creatures/creatures.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/creatures/creatures.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/combat/combat.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/combat/combat.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,10 +81,11 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Assia",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -132,8 +126,25 @@
       <workItem from="1760354103003" duration="316000" />
       <workItem from="1760354439275" duration="208000" />
       <workItem from="1760354655698" duration="12000" />
-      <workItem from="1763286418498" duration="801000" />
+      <workItem from="1763286418498" duration="2957000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <option name="closed" value="true" />
+      <created>1763287246898</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763287246898</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit&amp;">
+      <option name="closed" value="true" />
+      <created>1763287600817</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1763287600817</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,5 +154,10 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <MESSAGE value="commit&amp;" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit&amp;" />
   </component>
 </project>
